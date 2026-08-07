@@ -5,67 +5,80 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>SysDeck — Terms of Use</title>
 <style>
-  :root { color-scheme: dark; }
-  * { box-sizing: border-box; }
-  body {
-    margin: 0; min-height: 100vh; display: flex; align-items: center; justify-content: center;
-    background: #0A0A0A; color: #ECECEC;
-    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-    line-height: 1.6; padding: 24px;
+  :root {
+    color-scheme: dark;
+    --bg: #07090D; --panel: rgba(255,255,255,0.03); --border: rgba(255,255,255,0.08);
+    --text: #E7ECF3; --muted: #8A94A6; --accent: #22D3EE; --accent-2: #6366F1;
   }
-  .panel { width: 100%; max-width: 720px; border: 1px solid #222222; border-radius: 16px; padding: 40px 44px; background: #141414; }
-  h1 { margin: 0; font-size: 28px; font-weight: 700; }
-  .sub { margin: 4px 0 26px; color: #A0A0A0; font-size: 13px; letter-spacing: .4px; }
-  h2 { font-size: 17px; font-weight: 600; color: #FFB300; margin: 28px 0 8px; }
-  p, li { color: #ECECEC; font-size: 15px; }
-  a { color: #FFB300; text-decoration: none; }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    background:
+      radial-gradient(1000px 500px at 90% -10%, rgba(99,102,241,0.16), transparent 60%),
+      radial-gradient(800px 400px at 0% 0%, rgba(34,211,238,0.1), transparent 55%),
+      var(--bg);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", Inter, Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+    padding: 48px 24px 80px;
+  }
+  .wrap { max-width: 760px; margin: 0 auto; }
+  .brand { display: flex; align-items: center; gap: 11px; font-weight: 700; margin-bottom: 30px; }
+  .brand .mark { width: 30px; height: 30px; }
+  .brand a { color: var(--text); text-decoration: none; }
+  .eyebrow { font-size: 12px; letter-spacing: 2px; text-transform: uppercase; color: var(--accent); }
+  h1 { font-size: 36px; font-weight: 800; letter-spacing: -.5px; margin: 8px 0 4px; }
+  .updated { color: var(--muted); font-size: 13px; margin-bottom: 30px; }
+  h2 { font-size: 18px; font-weight: 700; margin: 30px 0 8px; color: #fff; }
+  p, li { color: var(--text); font-size: 15.5px; }
+  strong { color: #fff; }
+  a { color: var(--accent); text-decoration: none; }
   a:hover { text-decoration: underline; }
-  strong { color: #FFFFFF; }
-  footer { margin-top: 36px; padding-top: 20px; border-top: 1px solid #222222; font-size: 12px; color: #606060; }
+  .panel { border: 1px solid var(--border); background: var(--panel); border-radius: 16px; padding: 30px 32px; }
+  .back { display: inline-block; margin-top: 28px; color: var(--muted); }
+  footer { margin-top: 40px; color: var(--muted); font-size: 13px; }
 </style>
 </head>
 <body>
-  <main class="panel">
-    <h1>Terms of Use</h1>
-    <p class="sub">SYSDECK &middot; LAST UPDATED AUGUST 2026</p>
+  <div class="wrap">
+    <div class="brand">
+      <svg class="mark" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <rect x="1.5" y="1.5" width="61" height="61" rx="15" stroke="url(#g1)" stroke-width="3"/>
+        <path d="M10 40 L20 40 L26 24 L34 48 L40 32 L46 40 L54 40" stroke="url(#g1)" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+        <defs><linearGradient id="g1" x1="0" y1="0" x2="64" y2="64"><stop stop-color="#22D3EE"/><stop offset="1" stop-color="#6366F1"/></linearGradient></defs>
+      </svg>
+      <a href="index.html">SysDeck</a>
+    </div>
 
-    <p>By downloading or using SysDeck ("the app"), you agree to these terms.</p>
+    <div class="panel">
+      <div class="eyebrow">Legal</div>
+      <h1>Terms of Use</h1>
+      <div class="updated">Last updated August 2026</div>
 
-    <h2>License</h2>
-    <p>You are granted a personal, non-transferable license to use SysDeck on
-    devices you own or control, subject to the App Store Terms (iOS) or the terms
-    accompanying the downloaded build (macOS).</p>
+      <p>By downloading or using SysDeck ("the app"), you agree to these terms.</p>
 
-    <h2>Terminating processes</h2>
-    <p>On macOS, SysDeck can end running processes at your request. Quitting or
-    force-quitting a process may cause that application to lose unsaved work or
-    behave unexpectedly. You are responsible for choosing which processes to end.
-    SysDeck will not knowingly interfere with the operating system beyond the
-    standard termination signals you invoke.</p>
+      <h2>License</h2>
+      <p>You are granted a personal, non-transferable license to use SysDeck on devices you own or control, subject to the App Store Terms (iOS) or the terms accompanying the downloaded build (macOS).</p>
 
-    <h2>No warranty</h2>
-    <p>SysDeck is provided "as is", without warranty of any kind. System metrics
-    are best-effort readings from the operating system and may not be exact. To
-    the maximum extent permitted by law, the developer is not liable for any
-    damages arising from the use of the app, including data loss resulting from
-    terminating a process.</p>
+      <h2>Terminating processes</h2>
+      <p>On macOS, SysDeck can end running processes at your request. Quitting or force-quitting a process may cause that application to lose unsaved work or behave unexpectedly. You are responsible for choosing which processes to end. SysDeck only sends the standard termination signals you invoke.</p>
 
-    <h2>Subscriptions &amp; purchases</h2>
-    <p>SysDeck Pro is available as an auto-renewing monthly subscription or a
-    one-time lifetime purchase, sold through Apple. Subscriptions renew
-    automatically unless cancelled at least 24 hours before the end of the
-    current period. Manage or cancel in your Apple ID account settings. Purchases
-    can be restored with the Restore Purchases button in the app.</p>
+      <h2>No warranty</h2>
+      <p>SysDeck is provided "as is", without warranty of any kind. System metrics are best-effort readings from the operating system and may not be exact. To the maximum extent permitted by law, the developer is not liable for any damages arising from use of the app, including data loss from terminating a process.</p>
 
-    <h2>Changes</h2>
-    <p>These terms may be updated from time to time; the current version is
-    always posted here.</p>
+      <h2>Subscriptions &amp; purchases</h2>
+      <p>SysDeck Pro is available as an auto-renewing monthly subscription or a one-time lifetime purchase, sold through Apple. Subscriptions renew automatically unless cancelled at least 24 hours before the end of the current period. Manage or cancel in your Apple ID account settings; purchases can be restored in the app.</p>
 
-    <h2>Contact</h2>
-    <p>Questions? Email <a href="mailto:taikatalvi13@gmail.com">taikatalvi13@gmail.com</a>.</p>
+      <h2>Changes</h2>
+      <p>These terms may be updated from time to time; the current version is always posted here.</p>
 
-    <p><a href="index.html">&larr; Back to support</a></p>
-    <footer>&copy; 2026 SysDeck</footer>
-  </main>
+      <h2>Contact</h2>
+      <p>Questions? Email <a href="mailto:taikatalvi13@gmail.com">taikatalvi13@gmail.com</a>.</p>
+
+      <a class="back" href="index.html">&larr; Back to SysDeck</a>
+    </div>
+
+    <footer>© 2026 SysDeck</footer>
+  </div>
 </body>
 </html>

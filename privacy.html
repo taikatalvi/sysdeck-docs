@@ -5,66 +5,84 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>SysDeck — Privacy Policy</title>
 <style>
-  :root { color-scheme: dark; }
-  * { box-sizing: border-box; }
-  body {
-    margin: 0; min-height: 100vh; display: flex; align-items: center; justify-content: center;
-    background: #0A0A0A; color: #ECECEC;
-    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-    line-height: 1.6; padding: 24px;
+  :root {
+    color-scheme: dark;
+    --bg: #07090D; --panel: rgba(255,255,255,0.03); --border: rgba(255,255,255,0.08);
+    --text: #E7ECF3; --muted: #8A94A6; --accent: #22D3EE; --accent-2: #6366F1;
   }
-  .panel { width: 100%; max-width: 720px; border: 1px solid #222222; border-radius: 16px; padding: 40px 44px; background: #141414; }
-  h1 { margin: 0; font-size: 28px; font-weight: 700; }
-  .sub { margin: 4px 0 26px; color: #A0A0A0; font-size: 13px; letter-spacing: .4px; }
-  h2 { font-size: 17px; font-weight: 600; color: #FFB300; margin: 28px 0 8px; }
-  p, li { color: #ECECEC; font-size: 15px; }
-  a { color: #FFB300; text-decoration: none; }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    background:
+      radial-gradient(1000px 500px at 90% -10%, rgba(99,102,241,0.16), transparent 60%),
+      radial-gradient(800px 400px at 0% 0%, rgba(34,211,238,0.1), transparent 55%),
+      var(--bg);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", Inter, Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+    padding: 48px 24px 80px;
+  }
+  .wrap { max-width: 760px; margin: 0 auto; }
+  .brand { display: flex; align-items: center; gap: 11px; font-weight: 700; margin-bottom: 30px; }
+  .brand .mark { width: 30px; height: 30px; }
+  .brand a { color: var(--text); text-decoration: none; }
+  .eyebrow { font-size: 12px; letter-spacing: 2px; text-transform: uppercase; color: var(--accent); }
+  h1 { font-size: 36px; font-weight: 800; letter-spacing: -.5px; margin: 8px 0 4px; }
+  .updated { color: var(--muted); font-size: 13px; margin-bottom: 30px; }
+  h2 { font-size: 18px; font-weight: 700; margin: 30px 0 8px; color: #fff; }
+  p, li { color: var(--text); font-size: 15.5px; }
+  .muted { color: var(--muted); }
+  strong { color: #fff; }
+  a { color: var(--accent); text-decoration: none; }
   a:hover { text-decoration: underline; }
-  strong { color: #FFFFFF; }
-  footer { margin-top: 36px; padding-top: 20px; border-top: 1px solid #222222; font-size: 12px; color: #606060; }
+  .panel { border: 1px solid var(--border); background: var(--panel); border-radius: 16px; padding: 30px 32px; }
+  .back { display: inline-block; margin-top: 28px; color: var(--muted); }
+  footer { margin-top: 40px; color: var(--muted); font-size: 13px; }
 </style>
 </head>
 <body>
-  <main class="panel">
-    <h1>Privacy Policy</h1>
-    <p class="sub">SYSDECK &middot; LAST UPDATED AUGUST 2026</p>
+  <div class="wrap">
+    <div class="brand">
+      <svg class="mark" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <rect x="1.5" y="1.5" width="61" height="61" rx="15" stroke="url(#g1)" stroke-width="3"/>
+        <path d="M10 40 L20 40 L26 24 L34 48 L40 32 L46 40 L54 40" stroke="url(#g1)" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+        <defs><linearGradient id="g1" x1="0" y1="0" x2="64" y2="64"><stop stop-color="#22D3EE"/><stop offset="1" stop-color="#6366F1"/></linearGradient></defs>
+      </svg>
+      <a href="index.html">SysDeck</a>
+    </div>
 
-    <p>SysDeck is built to respect your privacy. This policy explains what the
-    app does and does not do with data.</p>
+    <div class="panel">
+      <div class="eyebrow">Privacy</div>
+      <h1>Privacy Policy</h1>
+      <div class="updated">Last updated August 2026</div>
 
-    <h2>Data we collect</h2>
-    <p><strong>None.</strong> SysDeck does not collect, store on our servers, or
-    transmit any personal data or usage analytics. There are no accounts and no
-    tracking.</p>
+      <p>SysDeck is built to respect your privacy. This policy explains what the app does and does not do with data.</p>
 
-    <h2>System metrics</h2>
-    <p>SysDeck reads system statistics — such as CPU load, memory usage, disk and
-    network activity, battery and thermal state, and (on macOS) the list of
-    running processes — directly from the operating system. This information is
-    displayed on your device only. It is never sent off the device, and any
-    history you keep is stored locally.</p>
+      <h2>Data we collect</h2>
+      <p><strong>None.</strong> SysDeck does not collect, store on any server, or transmit personal data or usage analytics. There are no accounts and no tracking.</p>
 
-    <h2>Purchases</h2>
-    <p>SysDeck Pro is sold through Apple's In-App Purchase system. Apple processes
-    the transaction and manages your subscription; SysDeck only receives from
-    Apple whether Pro is active. We never see your payment details.</p>
+      <h2>System metrics</h2>
+      <p>SysDeck reads system statistics — CPU, memory, disk and network activity, battery and thermal state, and (on macOS) the list of running processes — directly from the operating system. This is displayed on your device only, never sent off the device, and any history you keep is stored locally.</p>
 
-    <h2>Notifications</h2>
-    <p>If you enable alerts (a Pro feature), SysDeck posts local notifications on
-    your device when a threshold you configured is crossed. These are generated
-    and shown locally; nothing is sent to us.</p>
+      <h2>The privileged helper (macOS)</h2>
+      <p>If you install the optional helper, it runs locally to read per-process CPU and memory for all processes and communicates only with SysDeck on your Mac over a secure, code-signature-verified channel. It sends nothing over the network.</p>
 
-    <h2>Third parties</h2>
-    <p>SysDeck uses no third-party analytics, advertising, or tracking SDKs.</p>
+      <h2>Purchases</h2>
+      <p>SysDeck Pro is sold through Apple's In-App Purchase system. Apple processes the transaction and manages your subscription; SysDeck only learns from Apple whether Pro is active. We never see your payment details.</p>
 
-    <h2>Changes</h2>
-    <p>If this policy changes, the updated version will be posted here.</p>
+      <h2>Notifications</h2>
+      <p>If you enable alerts (a Pro feature), SysDeck posts local notifications on your device when a threshold you configured is crossed. These are generated and shown locally.</p>
 
-    <h2>Contact</h2>
-    <p>Questions about privacy? Email <a href="mailto:taikatalvi13@gmail.com">taikatalvi13@gmail.com</a>.</p>
+      <h2>Third parties</h2>
+      <p>SysDeck uses no third-party analytics, advertising, or tracking SDKs.</p>
 
-    <p><a href="index.html">&larr; Back to support</a></p>
-    <footer>&copy; 2026 SysDeck</footer>
-  </main>
+      <h2>Contact</h2>
+      <p>Questions about privacy? Email <a href="mailto:taikatalvi13@gmail.com">taikatalvi13@gmail.com</a>.</p>
+
+      <a class="back" href="index.html">&larr; Back to SysDeck</a>
+    </div>
+
+    <footer>© 2026 SysDeck</footer>
+  </div>
 </body>
 </html>
