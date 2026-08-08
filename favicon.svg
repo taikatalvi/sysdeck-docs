@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="64" y2="64" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#22D3EE"/>
+      <stop offset="1" stop-color="#6366F1"/>
+    </linearGradient>
+  </defs>
+  <!-- Dark rounded-square (squircle-ish) tile -->
+  <rect x="2" y="2" width="60" height="60" rx="15" ry="15" fill="#07090D"/>
+  <!-- Gradient border -->
+  <rect x="3.5" y="3.5" width="57" height="57" rx="13.5" ry="13.5" fill="none" stroke="url(#g)" stroke-width="3"/>
+  <!-- EKG-style metric line (matches the app icon / splash) -->
+  <path d="M12 38 L22 38 L28 22 L34 50 L40 30 L46 38 L52 38"
+        fill="none" stroke="url(#g)" stroke-width="4"
+        stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

@@ -1,7 +1,7 @@
 # SysDeck Docs
 
 Static support and legal site for SysDeck, hosted on GitHub Pages at
-`https://taikatalvi.github.io/sysdeck/`.
+`https://taikatalvi.github.io/sysdeck-docs/`.
 
 - `index.html` — support / landing page
 - `privacy.html` — Privacy Policy
