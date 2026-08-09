@@ -24,6 +24,7 @@
   }
   * { box-sizing: border-box; margin: 0; padding: 0; }
   html { scroll-behavior: smooth; }
+  html, body { overflow-x: hidden; max-width: 100%; }
   body {
     background:
       radial-gradient(1200px 600px at 80% -10%, rgba(99,102,241,0.18), transparent 60%),
@@ -49,6 +50,13 @@
   .nav-links { display: flex; gap: 22px; align-items: center; }
   .nav-links a { color: var(--muted); text-decoration: none; font-size: 14px; }
   .nav-links a:hover { color: var(--text); }
+  /* On phones the inline section links don't fit; keep only the brand and the
+     Support button so the header never overflows and causes horizontal scroll.
+     The section links stay reachable by scrolling the page. */
+  @media (max-width: 560px) {
+    .nav-links { gap: 12px; }
+    .nav-links a:not(.btn) { display: none; }
+  }
   .btn {
     display: inline-flex; align-items: center; gap: 8px;
     padding: 9px 16px; border-radius: 10px; font-weight: 600; font-size: 14px;
@@ -93,6 +101,11 @@
   .tile .v { font-size: 26px; font-weight: 700; margin-top: 6px; font-variant-numeric: tabular-nums; }
   .spark { height: 40px; margin-top: 12px; display: block; width: 100%; }
   @media (max-width: 760px) { .mock-body { grid-template-columns: repeat(2, 1fr); } }
+  @media (max-width: 420px) {
+    .wrap { padding: 0 16px; }
+    .tile .v { font-size: 22px; }
+    .mock-body { gap: 10px; padding: 14px; }
+  }
 
   /* Sections */
   section { padding: 64px 0; }
@@ -152,7 +165,7 @@
       <div class="brand">
         <svg class="mark" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
           <rect x="1.5" y="1.5" width="61" height="61" rx="15" stroke="url(#g1)" stroke-width="3"/>
-          <path d="M10 40 L20 40 L26 24 L34 48 L40 32 L46 40 L54 40" stroke="url(#g1)" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M10 33 L20 33 L26 17 L34 41 L40 25 L46 33 L54 33" stroke="url(#g1)" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
           <defs><linearGradient id="g1" x1="0" y1="0" x2="64" y2="64"><stop stop-color="#22D3EE"/><stop offset="1" stop-color="#6366F1"/></linearGradient></defs>
         </svg>
         SysDeck
