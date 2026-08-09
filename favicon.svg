@@ -1,16 +1,27 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
   <defs>
-    <linearGradient id="g" x1="0" y1="0" x2="64" y2="64" gradientUnits="userSpaceOnUse">
+    <!-- Wave gradient (cyan -> indigo), matches the brand. -->
+    <linearGradient id="wave" x1="0" y1="0" x2="64" y2="64" gradientUnits="userSpaceOnUse">
       <stop offset="0" stop-color="#22D3EE"/>
       <stop offset="1" stop-color="#6366F1"/>
     </linearGradient>
+    <!-- Subtle vertical brand wash over the dark base (top -> bottom). -->
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="64" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#173042"/>
+      <stop offset="0.55" stop-color="#0A0F16"/>
+      <stop offset="1" stop-color="#07090D"/>
+    </linearGradient>
+    <clipPath id="tile">
+      <rect x="0" y="0" width="64" height="64" rx="14" ry="14"/>
+    </clipPath>
   </defs>
-  <!-- Dark rounded-square (squircle-ish) tile -->
-  <rect x="2" y="2" width="60" height="60" rx="15" ry="15" fill="#07090D"/>
-  <!-- Gradient border -->
-  <rect x="3.5" y="3.5" width="57" height="57" rx="13.5" ry="13.5" fill="none" stroke="url(#g)" stroke-width="3"/>
-  <!-- EKG-style metric line (matches the app icon / splash) -->
-  <path d="M12 34 L22 34 L28 18 L34 46 L40 26 L46 34 L52 34"
-        fill="none" stroke="url(#g)" stroke-width="4"
-        stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- Full-bleed dark face (no border), matching the app icon. -->
+  <g clip-path="url(#tile)">
+    <rect x="0" y="0" width="64" height="64" fill="#07090D"/>
+    <rect x="0" y="0" width="64" height="64" fill="url(#bg)"/>
+    <!-- Bold EKG wave, centered. -->
+    <path d="M10 33 L21 33 L27 15 L33 47 L39 24 L45 33 L54 33"
+          fill="none" stroke="url(#wave)" stroke-width="5"
+          stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
 </svg>
